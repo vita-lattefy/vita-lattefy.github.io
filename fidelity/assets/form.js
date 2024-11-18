@@ -213,13 +213,14 @@ document.addEventListener('DOMContentLoaded', async function () {
           phoneNumber: phoneNumber,
           logCount: 0,
           startDate: new Date(),
+          subscription: true,
           lastRating: 0,
           averageRating: 0,
           discountAvailable: false,
           giftAvailable: false,
-          currentBillies: 0,
-          totalBillies: 0,
-          claimedBillies: 0,
+          currentPoints: 0,
+          totalPoints: 0,
+          claimedGifts: 0,
           totalSpent: 0,
           averageExpenditure: 0
         }
@@ -314,7 +315,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       const client = await getClientByPhoneNumber(phoneNumber)
       console.log(client)
       document.getElementById("client-name").innerHTML = client.name
-      document.getElementById("current-billies").innerHTML = `${client.currentBillies} / 9`
+      document.getElementById("current-points").innerHTML = `${client.currentPoints} / 9`
     } else {
       window.location.href = './path.html'
       console.log('phoneNumber not found in the URL')

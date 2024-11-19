@@ -15,7 +15,7 @@ async function auth() {
   } else if (refreshToken || accessToken){
     await validateTokens(accessToken, refreshToken) 
   } else {
-    // window.location.href = 'https://lattefy.com.uy/auth'
+    window.location.href = 'https://lattefy.com.uy/auth'
   }
 }
 
@@ -77,7 +77,7 @@ async function refreshAccessToken(refreshToken) {
   
   } catch (error) {
     console.log('Error refreshing access token: ' + error.message)
-    // window.location.href = 'https://lattefy.com.uy/auth'
+    window.location.href = 'https://lattefy.com.uy/auth'
     throw error 
   }
 
@@ -124,7 +124,7 @@ async function authLogin(email, password) {
   
   } catch (error) {
     console.log('Authorization failed: ' + error.message)
-    // window.location.href = 'https://lattefy.com.uy/auth'
+    window.location.href = 'https://lattefy.com.uy/auth'
   }
 
 }

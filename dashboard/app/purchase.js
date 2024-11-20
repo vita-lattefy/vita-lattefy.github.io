@@ -5,7 +5,7 @@
 // Display Function
 const functionHeader = document.getElementById('function-header')
 const functionSelector = document.getElementById('function-selector')
-const addInputs = document.getElementById('add-vita-inputs')
+const addInputs = document.getElementById('add-points-inputs')
 const claimInputs = document.getElementById('claim-gift-inputs')
 
 function toggleInputs() {
@@ -13,7 +13,7 @@ function toggleInputs() {
     console.log(selectedFunction)
     
     if (selectedFunction === 'add-points') {
-        functionHeader.innerHTML = 'Sumar Vita'
+        functionHeader.innerHTML = 'Sumar Cuevita'
         addInputs.style.display = 'flex'
         claimInputs.style.display = 'none'
     } else if (selectedFunction === 'claim-gift') {
@@ -44,10 +44,10 @@ function validatePhoneNumber (phoneNumber) {
         phoneInput = document.getElementById('phoneNumber')
     }
    
-    const phonePattern = /^0\d{8}$/ // starts with 0 and is 9 digits
+    const phonePattern = /^09\d{7}$/ // starts with 09 and is 9 digits
     if (!phonePattern.test(phoneNumber)) {
         phoneInput.style.borderColor = 'red'
-        alert('El celular debe comenzar con 0 y tener 9 dígitos')
+        alert('El celular debe comenzar con 09 y tener 9 dígitos')
         valid = false
     } else {
         phoneInput.style.borderColor = ''

@@ -67,7 +67,7 @@ async function uploadPurchase (phoneNumber, amountSpentNow) {
 
     const client = await getClientByPhoneNumber(phoneNumber)
 
-    if (client && client.currentPoints < 9) {  
+    if (client && client.currentPoints < 5) {  
 
         const totalExpenditure = client.totalSpent + amountSpentNowNum
 
@@ -84,14 +84,14 @@ async function uploadPurchase (phoneNumber, amountSpentNow) {
 
         const updates = {}
 
-        if (currentPoints == 4) {
+        if (currentPoints == 3) {
             updates.discountAvailable = true
             sendFileEmail(client, 'discount')
-        } else if (currentPoints == 9) {
+        } else if (currentPoints == 5) {
             updates.giftAvailable = true
             sendFileEmail(client, 'gift')
         }
-        alert(`Se ha agregado una vita: ${currentPoints}/9`)
+        alert(`Se ha agregado una vita: ${currentPoints}/5`)
 
         updates.currentPoints = currentPoints
         updates.totalPoints = totalPoints
@@ -101,8 +101,8 @@ async function uploadPurchase (phoneNumber, amountSpentNow) {
         await updateClient(phoneNumber, updates)
         console.log('Se ha cargado la compra con exito!')
 
-    } else if (client && client.currentPoints == 9) {
-        alert(`${client.currentPoints}/9: El cliente debe reclamar su cafe gratis`)
+    } else if (client && client.currentPoints == 5) {
+        alert(`${client.currentPoints}/5: El cliente debe reclamar su cafe gratis`)
     } else {
         alert('No se ha encontrado el cliente.')
     }
@@ -122,19 +122,19 @@ async function claimGift (phoneNumber) {
 
         const updates = {}
 
-        if (client.currentPoints >= 4 && client.discountAvailable == true) {
+        if (client.currentPoints >= 3 && client.discountAvailable == true) {
             updates.discountAvailable = false
-            alert(`${client.currentPoints}/9: El cliente reclamo un 15% de descuento`)
+            alert(`${client.currentPoints}/5: El cliente reclamo un 15% de descuento`)
 
-        } else if (client.currentPoints == 9 && client.giftAvailable == true) {
-            updates.currentPoints = client.currentPoints - 9
+        } else if (client.currentPoints == 5 && client.giftAvailable == true) {
+            updates.currentPoints = client.currentPoints - 5
             updates.discountAvailable = false
             updates.giftAvailable = false
             updates.claimedBillies = client.claimedBillies + 1
-            alert(`${client.currentPoints}/9: El cliente reclamo una burger gratis`)
+            alert(`${client.currentPoints}/5: El cliente reclamo una burger gratis`)
 
         } else {
-            alert(`El cliente no tiene ningun regalo: ${client.currentPoints}/9`)
+            alert(`El cliente no tiene ningun regalo: ${client.currentPoints}/5`)
         }
 
         await updateClient(phoneNumber, updates)

@@ -48,6 +48,7 @@ div {
 
 :root {
     --brown: #9d561c;
+    /* --brown: #7f563d; */
     --white: #fff2e9;
     --dark: #181c1f;
 
@@ -77,7 +78,7 @@ div {
 /* ------------------------------------------- Loader ---------------------------------------------- */
 
 #loader {
-    background: var(--loader-bg-color) url(images/website/loaders/loader-white.svg) no-repeat center center;
+    background: var(--loader-bg-color) url(images/loaders/loader-white.svg) no-repeat center center;
     display: block;
     background-size: 10%;
     position: fixed;

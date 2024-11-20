@@ -12,7 +12,7 @@ function toggleInputs() {
     const selectedFunction = functionSelector.value
     console.log(selectedFunction)
     
-    if (selectedFunction === 'add-vita') {
+    if (selectedFunction === 'add-points') {
         functionHeader.innerHTML = 'Sumar Vita'
         addInputs.style.display = 'flex'
         claimInputs.style.display = 'none'

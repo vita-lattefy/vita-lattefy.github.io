@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     function setEventListeners() {
       const selectedFunction = checkSelector()
 
-        // Add Billy
+        // Add Points
         if (selectedFunction === 'add-points') {
             const purchaseBtn = document.getElementById('purchase-btn')
             const newPurchaseBtn = purchaseBtn.cloneNode(true)
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   if (document.getElementById('stats')) {
 
     displayClientCount(clients)
-    displayTotalBillies(clients)
+    displayTotalPoints(clients)
     displayClaimedCards(clients)
     // sentimentAnalysis(clients)
     displayLogCount(clients)

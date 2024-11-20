@@ -1,8 +1,8 @@
 // Function to send emails using EmailJS
 
 const images = {
-   discount: 'https://res.cloudinary.com/dif3u3ft1/image/upload/v1731019308/discount_ttvqrd.png',
-   gift: 'https://res.cloudinary.com/dif3u3ft1/image/upload/v1731019308/gift_lvp1rw.png'
+   discount: 'https://res.cloudinary.com/db87ezvoh/image/upload/v1732130281/gift_tedae8.png',
+   gift: 'https://res.cloudinary.com/db87ezvoh/image/upload/v1732130281/gift_tedae8.png'
 }
 
 const titles = {

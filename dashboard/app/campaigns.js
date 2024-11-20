@@ -21,7 +21,7 @@ async function sendCampaignEmail(clients, title, content, imageUrl) {
             }
 
             const serviceID = 'service_o2dl7in';
-            const templateID = 'template_imohbih';
+            const templateID = 'template_ej3kwh8';
     
             await emailjs.send(serviceID, templateID, templateParams)
     
@@ -42,7 +42,7 @@ async function uploadImageToCloudinary(imageFile) {
     formData.append('upload_preset', 'my_unsigned_preset')
 
     try {
-        const response = await fetch('https://api.cloudinary.com/v1_1/dif3u3ft1/image/upload', {
+        const response = await fetch('https://api.cloudinary.com/v1_1/db87ezvoh/image/upload', {
             method: 'POST',
             body: formData
         })

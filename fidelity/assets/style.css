@@ -386,6 +386,10 @@ section{
     width: 100px;
     height: auto;
 }
+#done .container i {
+    font-size: 90px;
+    color: #22ce7e;
+}
 
 /* CARD */
 
@@ -401,8 +405,8 @@ section{
     box-shadow: var(--shadow);
 }
 #card .container img {
-    width: 50%;
-    margin: 0 auto 0 auto;
+    width: 40%;
+    margin: 0 auto 10px auto;
 }
 #card .container .billy-display {
     display: flex;

@@ -81,7 +81,7 @@ async function updateClient(phoneNumber, updates) {
 // Send email function
 async function sendCardEmail(client) {
 
-  const imageUrl = 'https://res.cloudinary.com/dif3u3ft1/image/upload/v1731019307/card_oac2x2.png'
+  const imageUrl = 'https://res.cloudinary.com/db87ezvoh/image/upload/v1732130280/card_h3yq2k.png'
   const title = 'Ya podes empezar a sumar vitas!'
 
   try {
